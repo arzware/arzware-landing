@@ -1,0 +1,332 @@
+1. Reference Style Benchmark
+
+The SocialLab website style is:
+
+Mood: warm AI research lab, social-good innovation, academic but modern.
+Colors: sand/beige canvas, deep teal structure, coral/salmon emphasis, peach/orange warmth, off-white breathing sections.
+Typography: condensed, geometric, technical, narrow, lightly futuristic. Headings have wide tracking.
+Layout: very spacious, horizontal, presentation-like sections with large gaps and strong visual rhythm.
+Components: fixed navbar, coral active underline, rounded pill buttons, icon rows, stat bands, soft flat cards.
+Illustrations: custom SVG-like diagrams, human/brain/data/network motifs, circular arcs, node dots, thin lines.
+Motion direction: should feel slow, calm, precise, like diagrams assembling.
+
+This should not become a generic SaaS landing page.
+
+2. Score Comparison
+Criteria	AI Result A	AI Result B	Winner
+Visual fidelity	9	8	A
+Color palette accuracy	9	8	A
+Typography accuracy	9	7.5	A
+Layout / spacing accuracy	9	8	A
+UI component accuracy	9	8	A
+Illustration style accuracy	9	8.5	A
+Animation quality	9	8	A
+Presentation website suitability	9	8.5	A
+React/Tailwind/Framer usefulness	9	8	A
+Risk of becoming generic	Low	Medium	A
+
+Overall:
+
+AI Result A: 9/10
+AI Result B: 8/10
+3. AI Result A Critique
+What it understood well
+
+Result A correctly captured the real design language:
+
+“Human-centered AI lab” feeling.
+Warm sand / teal / coral / peach palette.
+Condensed technical typography.
+Full-screen slide rhythm.
+Custom SVG illustrations instead of icon libraries.
+Right-side progress rail.
+Scroll snapping.
+SVG path drawing animations.
+Reusable React/Tailwind component system.
+
+This is close to what we need.
+
+Best parts to keep
+
+Keep these from Result A:
+
+Theme idea: Human Systems Intelligence
+Palette direction:
+deep teal
+coral
+peach
+warm sand
+off-white
+Font recommendation:
+Rajdhani as main font
+Share Tech Mono only for small labels if needed
+Component list:
+Slide
+SectionTitle
+PillButton
+ProgressRail
+StatBlock
+RoadmapStep
+custom SVG illustration components
+Animation rules:
+fade-up
+staggered reveal
+SVG stroke drawing
+subtle floating nodes
+count-up stats
+What needs correction
+
+Result A is strong, but I would adjust:
+
+Do not overuse Share Tech Mono; it can make the design feel too code-heavy.
+Do not make every slide exactly 100vh on mobile. Use min-height: 100svh and allow content to breathe.
+Keep the content minimal. Replit may generate too much copy unless told directly.
+Ensure illustrations are custom SVGs, not Lucide icons with some colors applied.
+4. AI Result B Critique
+What it understood correctly
+
+Result B also understood:
+
+Warm tech / academic research feeling.
+Need for slide-based sections.
+Custom SVG geometry.
+Strong full-screen structure.
+Scroll snapping.
+Lab-style diagrams.
+No neon / no glassmorphism.
+Useful parts to steal from B
+
+Keep these ideas:
+
+“Interactive scientific journal” concept.
+The phrase “Complex yet legible” is good design guidance.
+The reminder that project/case-study sections should use a cleaner off-white/white canvas.
+Its explanation of the illustration system as “raw inline vector geometry” is useful.
+Its instruction to avoid generic icon libraries is correct.
+What is weaker
+
+Result B has some risks:
+
+It recommends Soft Peach #FA9C5E, which is too saturated/orange compared to the real screenshots. The site uses a softer muted peach.
+It suggests heading weights 500–700, but the reference does not feel bold-heavy. It is more medium/light with wide spacing.
+It recommends Barlow/Inter for body. That may work technically, but it can reduce brand consistency. Rajdhani should dominate.
+It says navbar can be transparent; the screenshots show a mostly solid light navbar.
+It is slightly more “design document” than “builder-ready system.”
+5. Winner
+Winner: AI Result A
+
+Use Result A as the base.
+
+It wins because it is more accurate in:
+
+typography
+color restraint
+component behavior
+motion language
+presentation-site structure
+avoiding generic SaaS direction
+
+Result B should only be used as a supplement for its “scientific journal / codex” framing and custom SVG emphasis.
+
+6. Best Combined Final Style Direction
+Color System
+
+Use this final locked palette:
+
+Role	HEX	Usage
+Main background / sand	#DED8C8	hero, roadmap, calm slides
+Alternate background	#F7F7F5	projects, clients, content-heavy slides
+Dark section background	#005B57	stats, footer, major contrast slide
+Primary brand teal	#00635F	headings, nav, SVG arcs, buttons
+Deep teal hover	#004F4B	button hover, strong accents
+Coral accent	#D6766B	headings, active nav, CTAs
+Orange-red node accent	#E94B2E	small SVG dots, progress markers
+Peach accent	#F4A261	service background, illustration fills
+Cream text	#F5F1E8	text on dark/peach sections
+Muted body text	#5F7E7B	body copy
+Border color	rgba(0,99,95,0.12)	cards, buttons, nav divider
+
+Avoid #FA9C5E as a full-section color unless softened. It is a bit too saturated.
+
+Typography
+
+Use:
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap");
+
+Recommended system:
+
+Main font: Rajdhani
+Technical micro-labels: Share Tech Mono
+Fallback: system-ui, sans-serif
+
+Rules:
+
+Headings: Rajdhani, weight 500, tracking 0.12em–0.18em
+Body: Rajdhani, weight 400, tracking 0.03em–0.05em
+Buttons/nav: Rajdhani, weight 500, tracking 0.06em–0.1em
+Avoid heavy 700 font weight.
+Avoid generic Inter-heavy styling.
+Layout
+
+Recommended slide flow:
+
+Hero intro
+Vision / overview
+Services / capabilities
+Roadmap / process
+Recent innovations / projects
+Industries / use cases
+Partners / clients
+Closing / footer
+
+Slide rules:
+
+Desktop: min-height: 100vh
+Mobile: min-height: 100svh, allow natural overflow if needed
+Use max-width: 1440px
+Use horizontal padding: 6vw
+Use large vertical spacing: 96px–140px
+Use wide, calm layouts with strong whitespace
+Avoid dense text blocks
+
+Best first prototype:
+
+Build only:
+
+Hero
+Services
+Roadmap
+
+Because these define the full visual system.
+
+UI Components
+Navbar
+Fixed top
+Height around 64px
+Light/off-white background
+Logo left
+Nav center/right
+Contact pill right
+Active item: coral text + thin coral underline
+Buttons
+
+Use pill buttons only.
+
+Primary:
+
+background: #00635F;
+color: #F5F1E8;
+border-radius: 999px;
+
+Coral CTA:
+
+background: #D6766B;
+color: #F5F1E8;
+
+Light secondary:
+
+background: rgba(255,255,255,0.45);
+border: 1px solid rgba(0,99,95,0.18);
+color: #00635F;
+Cards
+Flat, quiet, low-shadow or no-shadow
+Thin teal-tinted borders
+Small radius: 8px–14px
+No glassmorphism
+No heavy drop shadows
+Progress Rail
+
+Use the right-side vertical rail from Result A:
+
+fixed right side
+peach/orange vertical track
+teal rail detail
+coral active marker
+clickable slide dots/blocks
+Illustration Style
+
+This is critical.
+
+Use custom SVGs with:
+
+circular arcs
+human profile / brain / circuit motifs
+node networks
+data bars
+thin technical lines
+coral dots
+peach blobs
+teal structure strokes
+small diagram labels
+
+Recommended SVG values:
+
+large arcs: stroke-width 8–14px;
+small lines: stroke-width 1.5–2px;
+medium icon strokes: stroke-width 4–6px;
+node dots: 5–9px diameter;
+stroke-linecap: round;
+stroke-linejoin: round;
+
+Do not use Lucide/FontAwesome for the main visuals. Utility icons are okay only inside buttons.
+
+Animation Style
+
+Use Framer Motion.
+
+Core motion:
+
+ease: [0.22, 1, 0.36, 1]
+duration: 0.7 - 0.9
+
+Use:
+
+section fade-up
+staggered child reveals
+SVG path drawing
+subtle floating nodes
+active nav underline slide
+stat count-up
+small hover lift on buttons/cards
+
+Avoid:
+
+bounce
+springy elastic motion
+fast spinning
+aggressive parallax
+flashy gradient animation
+
+Motion should feel like technical diagrams assembling calmly.
+
+7. Final Rules for Replit Builder AI
+
+Use these as strict rules in the final prompt:
+
+Use React + Tailwind + Framer Motion.
+Build a presentation-style website, not a normal landing page.
+Every major section should behave like a slide.
+Use scroll snapping.
+Use the SocialLab screenshots as the visual source of truth.
+Use warm sand, off-white, deep teal, coral, and peach only.
+Use Rajdhani as the main typeface.
+Use wide letter spacing on headings.
+Use pill buttons only.
+Use a fixed navbar with coral active underline.
+Use a right-side slide progress rail.
+Create custom SVG illustrations.
+Animate SVG paths with stroke-drawing effects.
+Keep animations calm and precise.
+Keep content minimal and layout spacious.
+Avoid generic SaaS design.
+Avoid neon, blue/purple AI gradients, glassmorphism, heavy shadows, and 3D robots.
+Avoid stock icon packs for core visuals.
+Do not copy the website pixel-for-pixel, but make the presentation feel like the same brand system.
+8. Final Recommendation
+
+Use AI Result A as the base. Borrow from AI Result B only the “interactive scientific journal / codex” concept and its emphasis on raw inline SVG geometry.
+
+Final direction:
+
+Build a calm, warm, technical, human-centered AI presentation website using full-screen scroll-snapping slides, sand/off-white/teal/coral/peach colors, condensed Rajdhani typography, pill UI, custom SVG data/human/network illustrations, subtle path-drawing animations, and a fixed navbar/progress rail. The result should feel like SocialLab’s website was transformed into an interactive presentation experience.

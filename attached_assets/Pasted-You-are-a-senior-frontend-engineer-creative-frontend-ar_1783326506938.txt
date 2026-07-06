@@ -1,0 +1,684 @@
+You are a senior frontend engineer, creative frontend art director, motion designer, and design-system builder.
+
+I will provide:
+1. Reference screenshots from the SocialLab website.
+2. AI Result A: a design/theme analysis.
+3. AI Result B: another design/theme analysis.
+
+Your task is to build a polished interactive presentation website using React + Tailwind CSS + Framer Motion.
+
+This is NOT a normal landing page.
+This is NOT a PowerPoint deck.
+This is NOT a generic SaaS website.
+
+It must be a presentation-style website:
+- full-screen or near-full-screen sections
+- each section behaves like a slide
+- fixed navigation
+- smooth scrolling
+- scroll snapping
+- animated section transitions
+- custom SVG visual systems
+- right-side progress indicator
+- calm premium motion
+- strong visual storytelling
+
+The highest priority is matching the visual language of the provided SocialLab screenshots.
+
+Use AI Result A as the stronger base direction.
+Use AI Result B only as supporting input, especially for the “interactive scientific journal / codex” idea and the custom inline SVG geometry guidance.
+
+Do not blindly copy either AI result. Use the screenshots as the source of truth.
+
+---
+
+## 1. Core Goal
+
+Build an interactive slide-based presentation website that feels like the SocialLab website was transformed into a web presentation.
+
+The final result should feel like:
+- a calm AI research lab
+- a human-centered innovation studio
+- a technical social-good presentation
+- an interactive scientific journal
+- a warm, academic, futuristic presentation experience
+
+It should NOT feel like:
+- generic SaaS
+- generic AI startup landing page
+- neon cyberpunk
+- corporate consulting template
+- PowerPoint embedded in a browser
+- glassmorphism dashboard
+- random startup template
+
+---
+
+## 2. Required Tech Stack
+
+Use:
+
+- React
+- Vite
+- TypeScript if available
+- Tailwind CSS
+- Framer Motion
+
+Use component-based architecture.
+
+Create clean reusable components:
+- Navbar
+- Slide
+- SectionTitle
+- PillButton
+- ProgressRail
+- StatBlock
+- ServiceIcon
+- RoadmapStep
+- ProjectPanel
+- Custom SVG illustrations
+
+Avoid unnecessary dependencies.
+
+Lucide icons may be used only for tiny utility icons inside buttons.
+Do not use Lucide, FontAwesome, or stock icon packs for the main visual system.
+
+The main illustrations must be custom SVG/CSS.
+
+---
+
+## 3. Visual Source of Truth
+
+Use the uploaded SocialLab screenshots as the primary visual reference.
+
+Match these design qualities:
+
+### Brand mood
+- warm but technical
+- research-driven
+- human-centered AI
+- social-good innovation
+- calm and deliberate
+- academic but modern
+- slightly retro-futuristic
+
+### Layout feeling
+- very spacious
+- wide horizontal rhythm
+- strong whitespace
+- section-by-section storytelling
+- slide-like pacing
+- large visual compositions
+- asymmetric hero
+- icon grids
+- stat bands
+- clean project sections
+- strong footer/closing section
+
+### Illustration feeling
+- custom line art
+- circular arcs
+- data nodes
+- brain / human / AI diagrams
+- network graphs
+- mathematical/research details
+- peach blobs
+- coral dots
+- teal structural lines
+
+---
+
+## 4. Locked Color System
+
+Use this exact palette. Do not introduce unrelated colors.
+
+```js
+colors: {
+  brand: {
+    sand: "#DED8C8",
+    offwhite: "#F7F7F5",
+    cream: "#F5F1E8",
+    teal: "#00635F",
+    tealDark: "#005B57",
+    tealHover: "#004F4B",
+    coral: "#D6766B",
+    orangeRed: "#E94B2E",
+    peach: "#F4A261",
+    muted: "#5F7E7B",
+    border: "rgba(0,99,95,0.12)"
+  }
+}
+
+Usage rules:
+
+#DED8C8 warm sand = hero, roadmap, calm canvas slides
+#F7F7F5 off-white = projects, clients, content-heavy slides
+#005B57 dark teal = stats, footer, major contrast slides
+#00635F teal = headings, nav, SVG arcs, primary buttons
+#D6766B coral = active nav, CTA buttons, heading accents
+#E94B2E orange-red = tiny SVG dots, progress markers
+#F4A261 peach = service slide background, soft blobs, illustration fills
+#5F7E7B muted = body text and secondary labels
+
+Avoid:
+
+neon colors
+blue/purple AI gradients
+black-heavy dark mode
+loud saturated orange
+random bright colors
+5. Typography System
+
+Import and use:
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap");
+
+Typography rules:
+
+Main font: Rajdhani
+Micro technical labels only: Share Tech Mono
+Avoid Inter-heavy generic styling
+Avoid very bold font weights
+
+Heading style:
+
+Rajdhani
+weight 500 or 600 max
+large sizes
+wide letter spacing
+condensed geometric feel
+two-tone heading words using teal + coral
+
+Body style:
+
+Rajdhani
+weight 400
+muted teal text
+generous line-height
+slight letter spacing
+
+Recommended Tailwind values:
+
+headings: tracking-[0.12em] to tracking-[0.18em]
+nav/buttons: tracking-[0.06em] to tracking-[0.1em]
+body: tracking-[0.03em] to tracking-[0.05em]
+
+Do not use generic massive bold black SaaS headings.
+
+6. Site Structure / Slides
+
+Build around 8 presentation slides:
+
+Hero / Intro
+Vision / Overview
+Services / Capabilities
+Process / Four-step Roadmap
+Innovations / Projects
+Industries / Use Cases
+Partners / Clients
+Closing / Footer
+
+Content can be lightweight placeholder content for now, but the visual structure must be complete and polished.
+
+The content is less important than:
+
+design fidelity
+theme accuracy
+motion
+layout
+custom illustrations
+slide behavior
+
+Do not overload slides with text.
+
+7. Slide Behavior
+
+The website must behave like a web presentation.
+
+Implement:
+
+html {
+  scroll-behavior: smooth;
+}
+
+.presentation-root {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.presentation-slide {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+Important mobile correction:
+
+use min-height: 100svh where appropriate
+allow vertical overflow on mobile if content needs space
+do not break content by forcing everything into a tiny viewport
+
+Each slide should feel complete on its own.
+
+8. Fixed Navbar
+
+Create a fixed top navigation similar to the screenshots.
+
+Navbar requirements:
+
+fixed top
+light/off-white background
+height around 64px
+logo text on the left
+nav links centered/right
+contact pill on the far right
+active item has coral text and coral underline
+underline animates smoothly
+minimal or no shadow
+thin bottom border only if needed
+
+Style:
+
+background: #F7F7F5
+nav text: #00635F
+active text: #E94B2E
+underline: #E94B2E
+contact pill: warm cream fill
+
+The logo should be text-based if no real asset exists:
+
+“Social” in teal
+“lab” in peach/coral
+small “Innovations” label if tasteful
+
+Do not make the navbar look like a generic SaaS nav.
+
+9. Right-Side Progress Rail
+
+Implement a fixed right-side slide progress rail inspired by the screenshots.
+
+Requirements:
+
+fixed on the right edge
+vertical peach/orange rail
+teal structural strip/detail
+coral active marker
+clickable slide markers
+current slide should update while scrolling
+clicking marker smoothly scrolls to section
+
+The rail should feel like part of the brand, not a generic dot pagination.
+
+10. Buttons
+
+All buttons must be pill-shaped.
+
+Create reusable PillButton variants:
+
+Primary:
+
+background #00635F
+text #F5F1E8
+hover #004F4B
+
+Coral:
+
+background #D6766B
+text #F5F1E8
+
+Light:
+
+background rgba(255,255,255,0.45)
+border 1px solid rgba(0,99,95,0.18)
+text #00635F
+
+Button behavior:
+
+subtle hover translateY(-1px)
+no heavy shadow
+smooth transition
+optional tiny utility icon
+
+Avoid:
+
+square buttons
+gradient buttons
+heavy shadows
+bright blue buttons
+11. Custom SVG Illustration System
+
+This is one of the most important parts.
+
+Build several custom SVG illustration components that match the SocialLab visual language.
+
+Create original SVG components such as:
+
+HeroSystemDiagram
+BrainCircuitIcon
+DataArcIcon
+HumanProfileNetwork
+RoadmapDiagramIcon
+IndustryIconSet
+AbstractNodeNetwork
+CircularDataMotif
+
+Visual rules:
+
+circular arcs
+thin technical paths
+coral/orange node dots
+teal structural strokes
+peach translucent blobs
+small data bars
+tiny diagram labels
+abstract brain/human/data/network forms
+
+Recommended stroke system:
+
+large arcs: stroke-width 8–14
+medium icon strokes: stroke-width 4–6
+small detail lines: stroke-width 1.5–2
+node dots: radius 4–6
+stroke-linecap: round
+stroke-linejoin: round
+
+Do not use:
+
+stock icons
+3D robots
+generic AI brain icons
+neon circuitry
+cartoon characters
+realistic illustrations
+
+The SVGs should feel hand-built for this brand.
+
+12. Animation System
+
+Use Framer Motion.
+
+Motion should feel:
+
+calm
+premium
+precise
+scientific
+deliberate
+like diagrams assembling
+
+Do not use:
+
+bounce
+elastic spring effects
+fast spinning
+chaotic parallax
+aggressive reveal effects
+
+Use this easing:
+
+const premiumEase = [0.22, 1, 0.36, 1];
+
+Core animations:
+
+Section reveal
+opacity 0 → 1
+y 36 → 0
+duration 0.75–0.9s
+easing [0.22, 1, 0.36, 1]
+Staggered children
+stagger 0.08–0.12s
+SVG stroke drawing
+
+Use Framer Motion pathLength:
+
+<motion.path
+  initial={{ pathLength: 0, opacity: 0 }}
+  whileInView={{ pathLength: 1, opacity: 1 }}
+  transition={{ duration: 1.4, ease: "easeInOut" }}
+/>
+Floating decorative elements
+y movement 4–8px
+duration 6–12s
+repeat infinity
+reverse direction
+very subtle
+Stats
+count up when the stats slide becomes visible
+no flashy number rolling
+Hover states
+buttons lift slightly
+cards border shifts to teal/coral
+icons rotate arcs slightly
+coral nodes pulse subtly
+13. Slide Design Requirements
+Slide 1: Hero
+
+Must visually resemble the screenshot’s hero structure:
+
+warm sand background
+left text block
+large teal + coral heading
+small subtitle
+two pill buttons
+large custom abstract AI/human/network SVG on right
+decorative arcs and nodes
+spacious layout
+Slide 2: Vision / Overview
+warm sand or off-white
+illustration on one side
+title in coral/teal
+short text
+optional dark teal stats band integrated below or after
+Slide 3: Services / Capabilities
+peach background
+row/grid of 5–6 custom icons
+white/cream text where needed
+teal/coral icon strokes
+should feel close to the services screenshot
+Slide 4: Roadmap / Process
+warm sand background
+title with coral + teal split
+4 steps in horizontal layout
+each step has custom icon, small number badge, title, short text
+thin horizontal guide line
+Slide 5: Innovations / Projects
+off-white background
+centered heading
+asymmetric project layout
+use flat cards, mock dashboard panels, screenshot-like placeholders
+no heavy shadows
+Slide 6: Industries / Use Cases
+muted coral/terracotta background
+2-row grid of industry items
+custom icons
+teal headings
+cream/white descriptions
+pill buttons at bottom
+Slide 7: Partners / Clients
+off-white background
+centered title
+logo-strip style placeholders
+blog/card strip optional
+keep it clean and spacious
+Slide 8: Closing / Footer
+dark teal background
+columns of links/info
+large SocialLab-style wordmark
+circular social buttons
+small copyright strip
+calm closing CTA
+14. Component Architecture
+
+Use this structure if possible:
+
+src/
+  components/
+    layout/
+      Navbar.tsx
+      Slide.tsx
+      ProgressRail.tsx
+    ui/
+      PillButton.tsx
+      SectionTitle.tsx
+      StatBlock.tsx
+      RoadmapStep.tsx
+      ServiceIcon.tsx
+      ProjectCard.tsx
+    illustrations/
+      HeroSystemDiagram.tsx
+      BrainCircuitIcon.tsx
+      DataArcIcon.tsx
+      HumanProfileNetwork.tsx
+      RoadmapIcons.tsx
+      IndustryIcons.tsx
+  sections/
+    HeroSection.tsx
+    VisionSection.tsx
+    ServicesSection.tsx
+    RoadmapSection.tsx
+    ProjectsSection.tsx
+    IndustriesSection.tsx
+    ClientsSection.tsx
+    ClosingSection.tsx
+  App.tsx
+  index.css
+
+Keep the code clean and maintainable.
+
+15. Tailwind Theme Setup
+
+Add these design tokens to Tailwind:
+
+export default {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          sand: "#DED8C8",
+          offwhite: "#F7F7F5",
+          cream: "#F5F1E8",
+          teal: "#00635F",
+          tealDark: "#005B57",
+          tealHover: "#004F4B",
+          coral: "#D6766B",
+          orangeRed: "#E94B2E",
+          peach: "#F4A261",
+          muted: "#5F7E7B",
+        },
+      },
+      fontFamily: {
+        display: ["Rajdhani", "system-ui", "sans-serif"],
+        monoTech: ["Share Tech Mono", "monospace"],
+      },
+      letterSpacing: {
+        brand: "0.12em",
+        wideBrand: "0.18em",
+      },
+      borderRadius: {
+        pill: "999px",
+      },
+      transitionTimingFunction: {
+        premium: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
+    },
+  },
+};
+
+Base CSS:
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Rajdhani", system-ui, sans-serif;
+  background: #DED8C8;
+  color: #00635F;
+}
+
+.presentation-root {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.presentation-slide {
+  min-height: 100vh;
+  min-height: 100svh;
+  scroll-snap-align: start;
+  position: relative;
+}
+16. Quality Bar
+
+The final result must feel like a polished frontend prototype, not a rough AI-generated page.
+
+Requirements:
+
+responsive desktop/tablet/mobile
+no broken layout
+no horizontal overflow
+no unreadable text
+no over-crowded slides
+no stock-template feeling
+no inconsistent colors
+no random fonts
+no generic icon-pack look
+no huge dependency bloat
+smooth interactions
+accessible clickable elements
+semantic sections
+clean reusable components
+17. Build Strategy
+
+Start by building the design system and 3 core slides first:
+
+Hero
+Services
+Roadmap
+
+These define:
+
+typography
+colors
+navigation
+scroll snapping
+progress rail
+custom SVG icon style
+animation behavior
+
+Then complete the remaining slides using the same system.
+
+However, the final output should include all 8 slides.
+
+18. Final Non-Negotiable Direction
+
+Use AI Result A as the base direction.
+Borrow from AI Result B only:
+
+“interactive scientific journal / codex” feeling
+raw inline SVG geometry guidance
+complex-but-legible data lab visual logic
+
+The final website should feel like:
+
+A calm, warm, technical, human-centered AI lab presentation built as an interactive web experience.
+
+It should use:
+
+warm sand canvas
+deep teal structure
+coral active accents
+peach warmth
+condensed Rajdhani typography
+custom SVG diagram language
+full-screen slide rhythm
+subtle path-drawing motion
+large breathing room
+
+Do not generate a generic SaaS landing page.
+Do not generate a PowerPoint deck.
+Build a visually faithful interactive presentation website inspired directly by the uploaded SocialLab screenshots.

@@ -1,0 +1,997 @@
+1. Brand Feeling and Visual Personality
+
+The reference website feels like human-centered AI, research, social impact, and technical innovation.
+
+The presentation website should feel:
+
+Intelligent but warm → not cold enterprise AI.
+Scientific but human → diagrams, nodes, data arcs, human/brain motifs.
+Academic + innovation lab → like an AI research studio presenting frameworks and social-good projects.
+Calm and deliberate → lots of space, soft backgrounds, slow motion, structured layouts.
+Retro-futuristic → geometric typography, muted colors, technical illustrations, thin lines.
+Presentation-native → every section should feel like a curated slide, not a long scrolling landing page.
+
+The visual language is not “startup SaaS.” It is closer to:
+
+AI lab + social innovation studio + interactive research presentation.
+
+2. Color Palette
+Core Palette
+Role	Color Name	HEX	Usage
+Primary	Deep Teal	#00635F / #006A66	Main brand color, headings, icons, footer, active dark sections
+Secondary	Warm Coral	#D6766B	Section headings, active nav underline, highlights, CTA buttons
+Accent	Soft Peach	#F4A261 / #F6A565	Large section backgrounds, illustration fills, secondary accent
+Accent 2	Orange Red	#E94B2E	Small node dots, active indicators, SVG detail points
+Background	Warm Sand	#DED8C8	Hero background, roadmap sections, calm slide backgrounds
+Background Light	Off White	#F7F7F5	Content sections, blog/project card areas
+Dark Section	Deep Brand Teal	#005B57	Footer, stats sections, strong contrast slides
+Muted Text	Grey Teal	#5F7E7B	Body text, secondary labels
+Light Text	Cream White	#F5F1E8	Text on dark teal or peach backgrounds
+Button Cream	Warm Cream	#F3EEE2	Light pill buttons, navbar contact button
+Usage Rules
+Primary Teal
+
+Use for:
+
+Main headings
+Navbar links
+SVG arcs
+Icon strokes
+Stat numbers on light backgrounds
+Footer background
+Primary dark slides
+
+Do not overuse it as a full-page background except for major contrast moments.
+
+Coral
+
+Use for:
+
+Highlight words inside headings
+Active nav underline
+CTA buttons
+Section title accents
+Timeline numbers
+Important small UI states
+
+Coral should feel intentional, not decorative everywhere.
+
+Peach
+
+Use for:
+
+Full-slide background sections
+Large illustration fills
+Soft blobs
+Supporting icon fills
+Warm transition slides
+
+Peach works best with cream/white text and teal accents.
+
+Sand / Beige
+
+Use for:
+
+Main hero slides
+Roadmap slides
+Calm storytelling slides
+Background behind technical SVGs
+
+This is the “default presentation canvas.”
+
+3. Typography Direction
+
+The typography is one of the strongest brand signals.
+
+Visual Style
+
+The screenshots use a type style that feels:
+
+Condensed
+Rounded-geometric
+Monospaced-adjacent
+Slightly futuristic
+Technical but playful
+Wide letter spacing
+Light to medium font weight
+Recommended Fonts
+
+Best Google Font options:
+
+Rajdhani
+Closest practical match.
+Good for headings, nav, buttons, labels.
+Has the condensed tech look.
+Share Tech Mono
+Good for smaller labels and technical UI text.
+Use carefully, not for everything.
+Orbitron
+Too futuristic if overused.
+Could work only for tiny labels, but I would avoid it for main text.
+Oxanium
+Strong alternative.
+Feels technical and rounded.
+
+Recommended pairing:
+
+Headings / Nav / Buttons: Rajdhani
+Body / Paragraphs: Rajdhani or Inter
+Technical labels: Share Tech Mono
+
+Better practical setup:
+
+font-family: "Rajdhani", system-ui, sans-serif;
+Heading Style
+
+Use:
+
+Large size
+Light/medium weight
+Wide tracking
+Mixed color words
+Sentence case or title case
+Avoid bold heavy headings
+
+Example style:
+
+.heading-xl {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.05;
+}
+Body Style
+
+Use:
+
+Small to medium size
+Teal-grey text
+Generous line height
+Slight tracking
+Narrow content width
+
+Example:
+
+.body {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.75;
+}
+Casing
+
+Use mostly:
+
+Title Case for section titles
+ALL CAPS for labels like OPERATIONS, SERVICES, OVERVIEW
+Short technical labels for icons
+
+Avoid generic SaaS copy styling like massive bold black headlines.
+
+4. Layout Rules
+Overall Structure
+
+The site should behave as a slide-based scroll experience.
+
+Each section should be:
+
+min-height: 100vh
+scroll-snap-align: start
+large visual composition
+limited text
+strong spatial rhythm
+
+Recommended structure:
+
+Slide 1: Hero / Brand intro
+Slide 2: Vision / Concept
+Slide 3: Services / Capabilities
+Slide 4: Roadmap / Process
+Slide 5: Projects / Innovations
+Slide 6: Industries
+Slide 7: Clients / Partners
+Slide 8: Closing / Contact
+Slide Layout
+
+Use a consistent max-width:
+
+max-width: 1280px to 1440px
+horizontal padding: 5vw to 7vw
+vertical padding: 96px to 140px
+
+The reference uses a lot of wide horizontal breathing room. Do not crowd sections.
+
+Grid Behavior
+
+Use:
+
+12-column desktop grid
+Large empty zones
+Content often centered or slightly left aligned
+Visuals often oversized and partially cropped
+Cards in 2-column or 3-column groups
+Icon sections in 4 to 6 equal columns
+
+Example:
+
+Hero:
+left 40% text
+right 60% abstract SVG system
+
+Roadmap:
+4 equal columns
+each with icon → line → number → title → paragraph
+
+Services:
+6 icon blocks in one horizontal row
+
+Projects:
+left feature card
+right stacked screenshots/cards
+Alignment Style
+
+The design avoids strict corporate symmetry. It uses:
+
+Centered headings
+Asymmetric hero visuals
+Wide horizontal icon rows
+Footer with structured columns
+Large visual elements crossing section boundaries
+Hero Layout
+
+Hero should have:
+
+Warm sand background
+Logo/nav fixed at top
+Large typography on left
+Abstract AI/data illustration on right
+CTA pills below title
+Subtle decorative nodes and arcs
+Stats Section
+
+Stats should be:
+
+Full-width dark teal
+Large numbers
+Minimal labels
+Low-contrast oversized typography
+Strong horizontal distribution
+
+Use large numbers but avoid making it look like generic KPI blocks.
+
+Footer Style
+
+Footer should be:
+
+Deep teal background
+Multiple text columns left
+Large logo or wordmark right
+Small circular social icons
+Thin bottom copyright strip
+5. UI Component Style
+Navbar
+Style
+Fixed top
+White or off-white background
+Height around 64px
+Logo left
+Navigation centered/right
+Contact button far right
+Minimal shadow or no shadow
+background: #F7F7F5
+height: 64px
+border-bottom: 1px solid rgba(0, 99, 95, 0.08)
+Nav Items
+
+Use:
+
+font-size: 15–17px
+font-weight: 500
+letter-spacing: 0.04em
+color: teal
+Active Nav
+
+Treatment:
+
+Coral text
+Thin coral underline
+Underline spans full nav item width
+Animated sliding underline
+.active {
+  color: #E94B2E;
+}
+
+.active::after {
+  height: 2px;
+  background: #E94B2E;
+}
+Buttons
+Primary Button
+
+Use for main actions.
+
+background: #00635F
+text: #F5F1E8
+border-radius: 999px
+height: 44px
+padding: 0 32px
+letter-spacing: 0.08em
+
+Hover:
+
+slightly darker teal
+small translateY(-1px)
+no heavy shadow
+Coral Button
+
+Use for important CTA.
+
+background: #D6766B
+text: #F5F1E8
+border-radius: 999px
+Light Button
+
+Use secondary actions.
+
+background: rgba(255,255,255,0.45)
+border: 1px solid rgba(0,99,95,0.18)
+text: #00635F
+Button Shape
+
+Always pill-shaped. Avoid sharp rectangles.
+
+Cards
+
+Cards should be quiet.
+
+Use:
+
+background: #F7F7F5 or rgba(255,255,255,0.5)
+border: 1px solid rgba(0,99,95,0.08)
+border-radius: 8px to 14px
+shadow: very soft or none
+
+Avoid heavy SaaS shadows.
+
+Project cards can use screenshots with:
+
+border-radius: 10px
+soft border
+low opacity overlays
+Icon Blocks
+
+Structure:
+
+custom SVG icon
+short abbreviation/title
+small subtitle
+
+Style:
+
+SVG icons large: 88px–120px
+Thin strokes
+Coral node dots
+Teal arcs
+Peach fills
+White/cream internal lines
+Stats
+
+Use:
+
+font-size: 72px–120px
+font-weight: 400
+letter-spacing: 0.08em
+color: rgba(0,0,0,0.15) on teal
+
+Labels:
+
+color: #F5F1E8
+font-size: 22px
+letter-spacing: 0.08em
+
+One number can be peach/orange to create rhythm.
+
+Section Headers
+
+Use large, spaced text:
+
+font-size: 48px–72px
+letter-spacing: 0.14em
+font-weight: 500
+
+Mix colors inside the same heading:
+
+Four-Step Approach Roadmap!
+
+Where:
+
+Four-Step Approach = coral
+Roadmap! = teal
+Progress Indicator
+
+The screenshots show a right-side vertical scroll/progress element.
+
+Recreate it as:
+
+fixed right: 0
+thin vertical track
+orange/peach rail
+teal active handle
+coral marker dot
+
+It should indicate current slide and allow slide navigation.
+
+6. Illustration and Icon Style
+
+The illustration system is custom and important.
+
+Core Illustration Language
+
+Use:
+
+Thin geometric lines
+Circular arcs
+Semi-transparent circles
+Node dots
+Network lines
+Abstract human head / brain shapes
+Data bars
+Axes and tiny labels
+Small mathematical / science details
+Partial diagrams that look like research sketches
+Stroke Style
+
+Recommended SVG style:
+
+stroke-width: 2 to 6
+stroke-linecap: round
+stroke-linejoin: round
+fill: none for most elements
+
+For hero illustrations:
+
+large arcs: 8–14px stroke
+small diagrams: 1–2px stroke
+node dots: 6–10px diameter
+Motifs to Recreate
+
+Use original SVG/CSS elements based on these patterns:
+
+Human profile made from teal curved stroke
+Peach circular field behind head
+Network graph with coral nodes
+Data bars and tiny axes
+Brain / AI circuit hybrid
+Abstract service icons inside circular arcs
+Timeline icons using rounded rectangles and arcs
+Tiny labels like data, science, machine, knowledge
+Do Not Use
+
+Avoid:
+
+Stock icon packs
+FontAwesome-looking generic icons
+3D icons
+Neon gradients
+Realistic AI robots
+Heavy illustrations
+Corporate flat vector people
+
+The icons should look drawn from the brand’s internal visual grammar.
+
+7. Animation and Interaction Direction
+
+Motion should feel calm, intelligent, and presentation-like.
+
+Scroll Behavior
+
+Use:
+
+scroll-snap-type: y mandatory;
+scroll-behavior: smooth;
+
+Each slide:
+
+scroll-snap-align: start;
+min-height: 100vh;
+
+For a more controlled premium feel, use Framer Motion with section index tracking.
+
+Section Transitions
+
+Each slide should transition with:
+
+Soft opacity fade
+Slight vertical movement
+SVG elements drawing in
+Background color crossfade
+No harsh page jumps
+
+Example:
+
+section enters:
+opacity 0 → 1
+y 40 → 0
+duration 0.8s
+ease: cubic-bezier(0.22, 1, 0.36, 1)
+Reveal Animations
+
+Use staggered reveals:
+
+heading first
+subtitle second
+visual third
+buttons last
+
+For icon rows:
+
+icons reveal one by one with 80ms–120ms stagger
+SVG Stroke Drawing
+
+Use Framer Motion path animations:
+
+<motion.path
+  initial={{ pathLength: 0, opacity: 0 }}
+  whileInView={{ pathLength: 1, opacity: 1 }}
+  transition={{ duration: 1.4, ease: "easeInOut" }}
+/>
+
+This is very important for matching the technical diagram feeling.
+
+Floating Decorative Elements
+
+Use subtle motion only:
+
+node dots drift 4–8px
+arcs rotate 1–3 degrees
+small labels fade in/out softly
+
+Duration:
+
+6s–12s
+easeInOut
+repeat: Infinity
+repeatType: reverse
+
+Avoid fast movement.
+
+Hover States
+
+Buttons:
+
+translateY(-1px)
+slight opacity change
+
+Cards:
+
+image opacity increases
+border color becomes coral/teal
+small visual shift
+
+Nav:
+
+underline slides in
+text color coral
+
+Icons:
+
+arc rotates slightly
+coral node pulses softly
+Stat Count-Up
+
+Stats should animate when visible:
+
+0 → final number
+duration: 1.2s
+easeOut
+
+Keep it subtle. No casino-style number rolling.
+
+Parallax / Layer Motion
+
+Use light parallax on hero only:
+
+background blob moves slow
+teal arc moves slightly faster
+node network moves independent
+
+Do not parallax text heavily.
+
+8. Presentation Website Theme Proposal
+Theme Name
+
+Human Systems Intelligence
+
+Design Concept
+
+An interactive presentation website that feels like walking through an AI research lab notebook: every slide reveals a different layer of the company’s intelligence system — vision, services, process, industries, projects, and partners.
+
+The design should combine:
+
+Warm social-good tone
+Technical AI diagrams
+Abstract human/data visuals
+Calm full-screen storytelling
+Slide-like pacing
+Section Background Strategy
+
+Use alternating backgrounds:
+
+Slide 1 Hero: Warm Sand
+Slide 2 Vision: Warm Sand + dark teal stats band
+Slide 3 Services: Peach
+Slide 4 Roadmap: Warm Sand
+Slide 5 Projects: Off White
+Slide 6 Industries: Coral / muted terracotta
+Slide 7 Clients: Off White
+Slide 8 Footer / Closing: Deep Teal
+
+This mirrors the screenshot rhythm without copying exact layouts.
+
+Color Usage Strategy
+Teal = intelligence, structure, trust
+Coral = emphasis, action, active states
+Peach = warmth, social impact, human tone
+Sand = presentation canvas
+White = breathing room
+Deep Teal = authority / closing moments
+Motion Strategy
+
+Motion should feel like:
+
+research diagrams assembling
+slides gently entering
+data systems becoming visible
+
+Use:
+
+Scroll snap
+SVG path drawing
+Staggered icon reveals
+Count-up stats
+Smooth active nav tracking
+Right-side progress rail
+Component Strategy
+
+Build a small visual system:
+
+Slide
+SectionTitle
+PillButton
+BrandIcon
+DiagramBackground
+StatBlock
+ProjectPanel
+RoadmapStep
+ProgressRail
+FixedNavbar
+
+Keep components reusable, but allow each slide to have a custom composition.
+
+9. Implementation Notes for Replit
+
+Assume:
+
+React + Vite
+Tailwind CSS
+Framer Motion
+Lucide React only for tiny utility icons, not brand illustrations
+Tailwind Theme Tokens
+
+Add this to tailwind.config.js:
+
+export default {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          teal: "#00635F",
+          tealDark: "#00514E",
+          coral: "#D6766B",
+          orangeRed: "#E94B2E",
+          peach: "#F4A261",
+          sand: "#DED8C8",
+          cream: "#F5F1E8",
+          offwhite: "#F7F7F5",
+          muted: "#5F7E7B",
+        },
+      },
+      fontFamily: {
+        display: ["Rajdhani", "system-ui", "sans-serif"],
+        monoTech: ["Share Tech Mono", "monospace"],
+      },
+      letterSpacing: {
+        brand: "0.12em",
+        wideBrand: "0.18em",
+      },
+      borderRadius: {
+        pill: "999px",
+      },
+      transitionTimingFunction: {
+        premium: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
+    },
+  },
+};
+
+Import fonts:
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap");
+Base CSS
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rajdhani", system-ui, sans-serif;
+  background: #ded8c8;
+  color: #00635f;
+}
+
+.presentation-root {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.presentation-slide {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+Recommended Component Structure
+src/
+  components/
+    layout/
+      Navbar.tsx
+      Slide.tsx
+      ProgressRail.tsx
+    ui/
+      PillButton.tsx
+      SectionTitle.tsx
+      StatBlock.tsx
+      RoadmapStep.tsx
+      ServiceIcon.tsx
+      ProjectCard.tsx
+    illustrations/
+      HeroSystemDiagram.tsx
+      BrainCircuitIcon.tsx
+      DataArcIcon.tsx
+      RoadmapIcons.tsx
+  sections/
+    HeroSection.tsx
+    VisionSection.tsx
+    ServicesSection.tsx
+    RoadmapSection.tsx
+    ProjectsSection.tsx
+    IndustriesSection.tsx
+    ClientsSection.tsx
+    ClosingSection.tsx
+Slide Component
+import { motion } from "framer-motion";
+
+type SlideProps = {
+  id: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export function Slide({ id, className = "", children }: SlideProps) {
+  return (
+    <section
+      id={id}
+      className={`presentation-slide px-[6vw] py-28 ${className}`}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 36 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.45 }}
+        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+        className="mx-auto max-w-[1440px]"
+      >
+        {children}
+      </motion.div>
+    </section>
+  );
+}
+Section Title Component
+type SectionTitleProps = {
+  muted?: string;
+  strong: string;
+  align?: "left" | "center";
+};
+
+export function SectionTitle({
+  muted,
+  strong,
+  align = "left",
+}: SectionTitleProps) {
+  return (
+    <h2
+      className={[
+        "font-display text-5xl md:text-7xl font-medium tracking-brand leading-none",
+        align === "center" ? "text-center" : "text-left",
+      ].join(" ")}
+    >
+      {muted && <span className="text-brand-coral">{muted} </span>}
+      <span className="text-brand-teal">{strong}</span>
+    </h2>
+  );
+}
+SVG Illustration Strategy
+
+Use handmade SVG components.
+
+Example pattern:
+
+import { motion } from "framer-motion";
+
+export function DataArcIcon() {
+  return (
+    <svg viewBox="0 0 160 160" className="h-28 w-28 overflow-visible">
+      <motion.circle
+        cx="80"
+        cy="80"
+        r="48"
+        fill="none"
+        stroke="#00635F"
+        strokeWidth="8"
+        strokeLinecap="round"
+        initial={{ pathLength: 0 }}
+        whileInView={{ pathLength: 1 }}
+        transition={{ duration: 1.2, ease: "easeInOut" }}
+      />
+
+      <circle cx="42" cy="64" r="5" fill="#E94B2E" />
+      <circle cx="108" cy="40" r="5" fill="#E94B2E" />
+      <circle cx="122" cy="94" r="5" fill="#E94B2E" />
+
+      <path
+        d="M48 92 C70 60, 94 118, 120 72"
+        fill="none"
+        stroke="#F5F1E8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+Important:
+
+Do not depend on icon libraries for the main visuals.
+Build 6–10 custom SVG motifs and reuse them.
+Use the same colors and stroke widths everywhere.
+Framer Motion Variants
+export const fadeUp = {
+  hidden: { opacity: 0, y: 36 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+export const staggerGroup = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const drawPath = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: {
+    pathLength: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.4,
+      ease: "easeInOut",
+    },
+  },
+};
+Progress Rail
+
+Implement as fixed right-side navigation:
+
+const slides = ["hero", "vision", "services", "roadmap", "projects", "industries"];
+
+export function ProgressRail({ active }: { active: string }) {
+  return (
+    <div className="fixed right-0 top-0 z-50 h-screen w-3 bg-brand-peach">
+      <div className="absolute right-0 top-0 h-full w-[3px] bg-brand-teal" />
+
+      <div className="absolute right-0 top-1/2 flex -translate-y-1/2 flex-col gap-8">
+        {slides.map((slide) => (
+          <a
+            key={slide}
+            href={`#${slide}`}
+            className={[
+              "block h-4 w-4 rounded-l-full transition-all duration-300",
+              active === slide
+                ? "bg-brand-orangeRed"
+                : "bg-brand-teal/40 hover:bg-brand-coral",
+            ].join(" ")}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+Faster / Better Approach
+
+Do not start by building all sections.
+
+Start by building a visual prototype with 3 slides only:
+
+1. Hero
+2. Services
+3. Roadmap
+
+Because those three slides define:
+
+typography
+colors
+icon system
+scroll behavior
+animation style
+navigation
+spacing rules
+
+After those are approved, expanding to the full site becomes much easier.
+
+10. Do and Do Not List
+Do
+Use warm sand, teal, coral, peach, and off-white.
+Use condensed geometric typography.
+Use large letter spacing.
+Build full-screen scroll-snapping sections.
+Use custom SVG illustrations.
+Animate SVG paths drawing in.
+Use subtle staggered reveals.
+Keep layouts spacious.
+Use pill buttons.
+Use thin active nav underlines.
+Use right-side slide progress.
+Mix technical diagrams with human-centered visuals.
+Use muted, calm, premium motion.
+Let some illustrations partially crop or overlap section boundaries.
+Keep section copy minimal and presentation-like.
+Do Not
+Do not make it look like a generic SaaS landing page.
+Do not use neon colors.
+Do not use blue/purple AI gradients.
+Do not use heavy glassmorphism.
+Do not use loud shadows.
+Do not use 3D AI robots.
+Do not use generic stock icons.
+Do not use heavy bold fonts.
+Do not overcrowd slides with content.
+Do not copy the screenshots pixel-for-pixel.
+Do not use random colors outside the reference palette.
+Do not make animations bouncy or fast.
+Do not turn it into a PowerPoint-style deck.
+Do not make every section white.
+Do not treat it as a normal landing page.
+Final Direction Summary
+
+The final presentation website should feel like:
+
+A calm, technical, human-centered AI lab presentation built as an interactive web experience.
+
+The strongest visual decisions are:
+
+Warm sand canvas
+Deep teal structure
+Coral active accents
+Peach warmth
+Condensed futuristic typography
+Custom SVG diagram language
+Full-screen slide rhythm
+Subtle path-drawing motion
+Large breathing room

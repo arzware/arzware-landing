@@ -1,40 +1,55 @@
-# Arzware Landing Page
+# SocialLab Interactive
 
-Premium Next.js landing page for Arzware: a senior-led software and digital systems company building websites, dashboards, automations, CRM-lite systems, internal tools, and AI-assisted workflows.
+This is the interactive presentation website for SocialLab.
 
-## Stack
+## Local Setup
 
-- Next.js App Router
-- TypeScript
-- CSS design system in `app/globals.css`
-- Local client-side form inquiry preparation
-- SEO metadata and JSON-LD structured data
+1. Install dependencies using pnpm:
+   ```bash
+   pnpm install
+   ```
 
-## Local development
+2. Run the development server:
+   ```bash
+   pnpm --filter @workspace/sociallab run dev
+   ```
+   Or from the root:
+   ```bash
+   pnpm run dev
+   ```
 
+## Building for Production
+
+To build the project locally, run:
 ```bash
-npm install
-npm run dev
+pnpm run build
 ```
+This command runs `tsc` for typechecking and `vite build` to output static files to `artifacts/sociallab/dist/public`.
 
-Open the local URL shown by Next.js.
+## Local Preview
 
-## Quality checks
-
+After building, you can preview the production build locally:
 ```bash
-npm run lint
-npm run typecheck
-npm run build
+pnpm --filter @workspace/sociallab run serve
 ```
+(Or run the equivalent Vite preview command).
 
-## Project structure
+## GitHub Pages Deployment
 
-- `app/layout.tsx` — metadata, viewport, font setup
-- `app/page.tsx` — page entry
-- `app/components/ArzwareLanding.tsx` — full landing page content and interactions
-- `app/globals.css` — responsive design system, layout, motion, reduced-motion support
-- `IMPLEMENTATION_PLAN.md` — concise implementation plan and architecture
+This project is configured to deploy automatically to GitHub Pages using GitHub Actions (`.github/workflows/deploy.yml`).
 
-## Live form note
+When you push to the `main` branch, the workflow will:
+1. Setup Node 20 and pnpm
+2. Install dependencies
+3. Build the project with `BASE_PATH=/sociallab-interactive/`
+4. Deploy the `artifacts/sociallab/dist/public` folder to GitHub Pages
 
-The current form prepares an inquiry summary locally and attempts to copy it to the clipboard. Connect it to the approved email, booking, CRM-lite, or automation workflow before production lead capture.
+### Expected URL
+The site will be available at:
+`https://YOUR_USERNAME.github.io/sociallab-interactive/`
+
+### GitHub Settings Configuration
+Make sure you enable GitHub Actions to deploy to Pages:
+1. Go to your repository **Settings** on GitHub.
+2. Select **Pages** on the left sidebar.
+3. Under **Source**, select **GitHub Actions**.

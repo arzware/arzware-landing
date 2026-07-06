@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&family=Share+Tech+Mono&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-sand: #DED8C8;
+  --color-off-white: #F7F7F5;
+  --color-dark-teal: #005B57;
+  --color-primary-teal: #00635F;
+  --color-coral: #D6766B;
+  --color-orange-red: #E94B2E;
+  --color-peach: #F4A261;
+  --color-cream: #F5F1E8;
+  --color-muted-teal: #5F7E7B;
+
+  --font-sans: 'Rajdhani', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+
+  --color-background: var(--color-off-white);
+  --color-foreground: var(--color-primary-teal);
+  --color-border: rgba(0, 99, 95, 0.1);
+}
+
+:root {
+  --background: 60 20% 97%; /* #F7F7F5 */
+  --foreground: 177 100% 19%; /* #00635F */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}

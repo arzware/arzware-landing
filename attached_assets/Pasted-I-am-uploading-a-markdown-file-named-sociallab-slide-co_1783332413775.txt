@@ -1,0 +1,171 @@
+I am uploading a markdown file named `sociallab_slide_content.md`.
+
+Use this file as the content source for the existing SocialLab interactive presentation website.
+
+Important:
+Do not redesign the website.
+Do not change the approved visual style.
+Do not change the desktop layout, colors, typography, navbar, animations, progress rail, or slide structure unless a small text-fit adjustment is necessary.
+Do not rebuild the project from scratch.
+
+Your task is only to replace the current placeholder text with the real slide content from the markdown file.
+
+## What to do
+
+Read `sociallab_slide_content.md` and update the presentation content slide by slide.
+
+Use the recommended 8-slide structure:
+
+1. Hero / Opening
+2. Who SocialLab Is
+3. Mission & Vision
+4. Capabilities / Services
+5. How SocialLab Works
+6. Platforms, Frameworks & Public Initiatives
+7. Selected Projects & Impact Areas
+8. Credibility & Closing
+
+Keep the existing design, but map the new content into the current sections.
+
+## Content rules
+
+Use concise presentation copy.
+
+For each slide:
+- use one strong headline
+- use one short supporting paragraph max
+- use 3–4 bullets max where needed
+- avoid long text blocks
+- keep the slide visually clean
+- preserve the presentation feeling
+
+Do not paste every note from the markdown into the UI.
+The markdown contains planning notes too.
+Use only the slide-ready content:
+- slide titles
+- key messages
+- short body copy
+- bullets
+- CTA labels
+- capability labels
+- roadmap steps
+- project/impact categories
+
+Do not show internal notes like:
+- confidence level
+- priority
+- verification notes
+- visual direction
+- content rules
+- optional content pool
+- claims needing verification
+
+Those notes are for guidance only.
+
+## Accuracy rules
+
+Do not invent facts.
+Do not add unsupported numbers.
+Do not claim SocialLab is open-source.
+Use the phrase:
+“public frameworks, platforms, and initiatives”
+instead of “open-source” unless explicitly verified.
+
+Do not use client or partner logos/names unless already present and approved in the current project.
+
+## Slide mapping
+
+### Slide 1 — Hero
+Use:
+- title: Human-Centered AI Research
+- label: Innovation Factory & Academy
+- body: SocialLab combines artificial intelligence, machine learning, data science, and social sciences to create practical systems for organizations and society.
+- buttons: Our Vision / Explore Projects
+
+Keep the uploaded hero illustration on the right.
+
+### Slide 2 — Who SocialLab Is
+Use the ecosystem message:
+SocialLab connects strategy, engineering, training, and public-impact work into one AI ecosystem.
+
+Include pillars:
+- Innovation Factory
+- Academy
+- Community
+- Public initiatives
+
+### Slide 3 — Mission & Vision
+Use:
+- title: Intelligence for Social Good
+- key message about human-centered, responsible AI
+- bullets about AI, data science, social sciences, explainable AI, and social value
+
+### Slide 4 — Capabilities / Services
+Use the six capability blocks:
+- Applied Artificial Intelligence
+- Applied Machine Learning
+- Data Science & Analytics
+- Business Intelligence & Dashboards
+- Digital & AI Transformation
+- Research & Development
+
+Use short descriptions only.
+
+### Slide 5 — How SocialLab Works
+Use roadmap steps:
+1. Discovery / AI Assessment
+2. Strategic Roadmap
+3. Development
+4. Deployment, Monitoring & Training
+
+Keep it clean and readable.
+
+### Slide 6 — Platforms, Frameworks & Public Initiatives
+Use:
+- National AI Framework
+- OWLink.ai
+- SocialLab Portfolio
+- SocialLab Academy & Events
+
+Use cautious wording:
+“confirmed existence; details should stay high-level.”
+
+Do not over-explain.
+
+### Slide 7 — Selected Projects & Impact Areas
+Use impact categories:
+- Healthcare
+- Media & Information
+- Crisis & Open Data
+- Education & Training
+- Environment
+- Governance & Public Sector
+
+Do not overload with many project names.
+If using specific project names, keep them as examples and avoid claiming current status.
+
+### Slide 8 — Credibility & Closing
+Use:
+- title: Ready to Innovate?
+- message: SocialLab connects technical AI with responsible, practical, and human-centered impact.
+- CTA: Start a Conversation
+- footer-style credibility categories if needed:
+  Academic partners, NGO foundations, Tech institutes, Global funds, Data consortiums, Research labs
+
+## Mobile
+
+Keep mobile readable:
+- shorter lines
+- no overflowing text
+- no cramped cards
+- stack content cleanly
+- hide or reduce non-essential text on mobile if necessary
+
+## Final check
+
+After updating:
+- desktop should still look visually unchanged
+- mobile should remain readable
+- no slide should feel overcrowded
+- no internal planning notes should appear on the website
+- all placeholder content should be replaced with SocialLab-specific content
