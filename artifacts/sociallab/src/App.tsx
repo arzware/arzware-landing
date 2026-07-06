@@ -181,7 +181,7 @@ function ScreenshotCard({ src, alt, className = "" }: { src: string; alt: string
         <span className="w-1.5 h-1.5 rounded-full bg-peach/80" />
         <span className="w-1.5 h-1.5 rounded-full bg-primary-teal/30" />
       </div>
-      <img src={src} alt={alt} className="w-full h-full object-cover object-top" loading="lazy" />
+      <img src={src} alt={alt} className="w-full h-full object-cover object-top" loading="eager" decoding="async" />
     </div>
   );
 }
@@ -585,7 +585,8 @@ function ProjectsSlide() {
                 src={heroImgs[i]}
                 alt={`${card.name} screenshot`}
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
+                loading="eager"
+                decoding="async"
               />
               {/* Preview badge — slightly larger */}
               <div className="absolute top-1.5 right-1.5 w-12 md:w-16 border border-white/70 shadow-sm rounded overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity">
